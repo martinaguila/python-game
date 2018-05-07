@@ -1,0 +1,3 @@
+title=Mini Game
+author=Martin ^_^
+orientation=portrait
