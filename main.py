@@ -27,6 +27,11 @@ Builder.load_string("""
 			on_press: root.manager.current = 'gamescreen2'
 			background_color: 1, .9, 0, 1
 			font_size: 40
+		Button:
+			text: 'Play Guess the Logo'
+			on_press: root.manager.current = 'playlogo'
+			background_color: 1, .6, 0, 1
+			font_size: 40
 		Label:
 			text: ''
 		Button:
@@ -177,7 +182,123 @@ Builder.load_string("""
 				on_press: root.backMain2()
 		Label:
 			text: ''
-			
+
+<playLogo>:
+	BoxLayout:
+		orientation: 'vertical'
+		Label:
+			text: 'Welcome to Guess the Logo'
+			font_size: 50
+		GridLayout:
+			cols: 6
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:				
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+		GridLayout:
+			cols: 6
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:				
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+		GridLayout:
+			cols: 6
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:				
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+			BoxLayout:
+				orientation: 'vertical'
+				Button:
+					text: '1'
+				TextInput:
+		BoxLayout:
+			Label:
+				text: ''
+		BoxLayout:
+			Button:
+				orientation: 'horizontal'
+				text: 'Back'
+				on_press: root.manager.current = 'mainscreen'
+				background_color: .7, 0, 0, 1
+				font_size: 40
+		BoxLayout:
+			Label:
+				text: ''
+
 """)
 
 
@@ -376,6 +497,9 @@ class GameScreen2(Screen):
 		self.ids.lblMessage2.text = str('Message!')
 		self.ids.lblOutput2.text = str('Press PLAY! to Start')
 		self.ids.txtWord.text = str('')
+
+class playLogo(Screen):
+	pass
 		
 
 # Create the screen manager
@@ -383,6 +507,7 @@ sm = ScreenManager()
 sm.add_widget(MainScreen(name="mainscreen"))
 sm.add_widget(GameScreen(name="gamescreen"))
 sm.add_widget(GameScreen2(name="gamescreen2"))
+sm.add_widget(playLogo(name="playlogo"))
 
 
 
